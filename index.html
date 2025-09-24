@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>SangarFlix</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SangarFlix - Iniciar Sesión</title>
+  <link rel="stylesheet" href="./style/style.css">
 </head>
-<body>
-    <div class="background"></div>
-
+<body class="login-bg">
+  <!-- Logo fijo arriba -->
   <header>
-    <h1 class="logo">SangarFlix</h1>
+    <h1 class="logo-text">SangarFlix</h1>
   </header>
 
-  <main class="login-container">
-
-      <main class="login-container">
-    <form id="loginForm" class="login-box">
-      <h2>Iniciar sesión</h2>
-      <input type="text" id="email" placeholder="Email o número de celular" required>
-      <input type="password" id="password" placeholder="Contraseña" required>
-      <button type="submit" class="btn-login">Iniciar sesión</button>
-      <a href="#" class="forgot">¿Olvidaste la contraseña?</a>
+  <!-- Caja de login -->
+  <div class="login-container">
+    <h2 class="form-title">Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUser" placeholder="Usuario" required>
+      <input type="password" id="loginPass" placeholder="Contraseña" required>
+      <button type="submit" class="btn">Iniciar Sesión</button>
     </form>
-  </main>
 
+    <p>¿No tienes cuenta? 
+      <a href="./html/register.html" class="link">Regístrate aquí</a>
+    </p>
+  </div>
+
+  <script src="./script/script.js"></script>
 </body>
 </html>

@@ -1,269 +1,136 @@
+/* ====== Reset ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-  height: 100%;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 body {
-  background: url("../imagenes/fondo_inicio.png") no-repeat center center fixed;
-  background-size: cover;
+  color: #fff;
+  background-color: #000;
+}
+
+/* ====== Logo global ====== */
+.logo-text {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: red;
+  margin: 20px;
+}
+
+/* ====== Fondo por páginas ====== */
+.login-bg, .register-bg {
+  background: url("../imagenes/fondo_inicio.png") no-repeat center center/cover;
   min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-/* Overlay sutil para oscurecer y dar contraste */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.8) 100%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Header, Logo arriba izquierda */
-.header {
-  position: absolute;
-  top: 20px;
-  left: 24px;
-  z-index: 2;
-}
-
-.logo {
-  color: #e50914; /* rojo Netflix */
-  font-weight: 800;
-  font-size: 34px;
-  letter-spacing: -0.5px;
-  line-height: 1;
-}
-
-.login-container{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   align-items: center;
   justify-content: center;
 }
 
-/* posicion central */
-.login-wrapper {
-  position: relative;
-  z-index: 2; 
+.home-bg {
+  background-color: #000;
+  color: #fff;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
 }
 
-/* cajita de login */
-.login-box {
-  width: 480px;
-  max-width: 92%;
-  background: rgba(0,0,0,0.72); /* translúcido oscuro */
-  padding: 48px 40px;
+/* ====== Contenedores ====== */
+.login-container, .register-container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
-  align-items: center;
+  width: 100%;
+  max-width: 350px;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
-/* logo de SangarFlix */
-.login-box h1,
-.login-box h2 {
-  margin: 0;
+.form-title {
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #fff;
-  font-weight: 800;
-  font-size: 36px;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* todos los inputss */
-.field {
-  display: block;
+/* ====== Inputs ====== */
+input {
   width: 100%;
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 14px 16px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  color: #fff;
-  border-radius: 6px;
-  font-size: 15px;
-  outline: none;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
-}
-
-input::placeholder {
-  color: rgba(255,255,255,0.65);
-}
-
-/* focus accesible */
-input:focus {
-  box-shadow: 0 0 0 3px rgba(229,9,20,0.10);
-  border-color: rgba(229,9,20,0.8);
-}
-
-.btn-login{
-  background-color: #e50914;
-  border-color: #e50914;
-  padding: 0.3vw;
-  border-radius: 1vw;
-  box-shadow: 0.5px 0.5px 10px white;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-}
-
-.btn-code{
-  background-color: #e50914;
-  border-color: #e50914;
-  padding: 0.3vw;
-  border-radius: 1vw;
-  box-shadow: 0.5px 0.5px 10px white;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-}
-
-/* botones de color rojo y gris cuadro */
-.btn {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  padding: 14px 16px;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 16px;
+  padding: 12px;
+  margin: 10px 0;
+  background: #333;
   border: none;
-  cursor: pointer;
-  transition: backgraund 0.12s ease, transform 0.06s ease;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 15px;
 }
 
-.btn:active { transform: translateY(1px); }
+input:focus {
+  outline: none;
+  border: 1px solid #e50914;
+  background: #444;
+}
 
-.btn-primary { 
+/* ====== Botones ====== */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
   background: #e50914;
+  border: none;
+  border-radius: 4px;
   color: #fff;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.2) inset;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.btn-primary:hover {
-  background: #f6121d;
+.btn:hover {
+  background: #f40612;
 }
 
-.btn-secondary {
-  background: rgba(255,255,255,0.06);
+.btn-logout {
+  background: #e50914;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  margin-left: auto;
 }
 
-.btn-secondary:hover {
-  background: rgba(255,255,255,0.09);
+.btn-logout:hover {
+  background: #f40612;
 }
 
-/* Espaciado entre los botones */
-.btn + .btn { margin-top: 12px; }
-
-/* aqui van opciones de recordar, o */
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.remember {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255,255,255,0.8);
-  font-size: 14px;
-}
-
-.remember input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-}
-
-
-.divider {
-  text-align: center;
-  color: rgba(255,255,255,0.65);
-  font-size: 14px;
-  margin: 8px 0;
-}
-
-/* el enlace de olvidar contraseña y otros*/
-.small-link {
-  text-align: center;
-  margin-top: 8px;
-  color: rgba(255,255,255,0.8);
-  font-size: 14px;
+/* ====== Links ====== */
+.link {
+  color: #fff;
   text-decoration: none;
-}
-
-.small-link:hover { text-decoration: underline; }
-
-.cta {
-  margin-top: 18px;
-  text-align: center;
-  color: rgba(255,255,255,0.9);
   font-size: 14px;
 }
 
-@media (min-width: 1100px) {
-  .login-box { width: 540px; padding: 56px 48px; }
-  .login-box h1 { font-size: 44px; }
+.link:hover {
+  text-decoration: underline;
 }
 
-/* "responsive??? "*/
-@media (max-width: 768px) {
-  .logo { font-size: 30px; left: 18px; top: 18px; }
-  .login-box {
-    width: 420px;
-    padding: 36px 28px;
-    border-radius: 8px;
+/* ====== Home ====== */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+/* ====== Responsivo ====== */
+@media (max-width: 600px) {
+  .login-container, .register-container {
+    padding: 25px;
+    max-width: 300px;
   }
-  .login-box h1
-   { font-size: 28px; text-align: center; }
-  input[type="text"], 
-  input[type="password"] 
-  { padding: 12px; font-size: 15px; }
-  .btn { padding: 12px; font-size: 15px; }
-}
 
-@media (max-width: 480px) {
-  .logo { font-size: 22px; left: 14px; top: 14px; }
-  .login-box {
-    width: 100%;
-    max-width: 420px;
-    padding: 28px 18px;
-    margin: 0 10px;
-    border-radius: 6px;
+  .logo-text {
+    font-size: 1.8rem;
   }
-  .login-box h1 { font-size: 22px; }
-  .divider { margin: 10px 0; }
-  .cta { font-size: 13px; }
-}
-
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
 }
