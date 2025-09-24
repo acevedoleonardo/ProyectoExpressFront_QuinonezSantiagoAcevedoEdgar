@@ -33,7 +33,6 @@ if (loginForm) {
     const validUser = users.find(u => u.username === username && u.password === password);
 
     if (validUser) {
-      alert(`Bienvenido ${username} 👋`);
       localStorage.setItem("loggedUser", JSON.stringify(validUser));
       window.location.href = "./html/home.html";
     } else {

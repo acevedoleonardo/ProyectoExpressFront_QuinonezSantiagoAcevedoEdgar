@@ -1,4 +1,4 @@
-/* ====== Reset ====== */
+/* reset */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   background-color: #000;
 }
 
-/* ====== Logo global ====== */
+/* logo global */
 .logo-text {
   font-size: 2.2rem;
   font-weight: bold;
@@ -19,7 +19,26 @@ body {
   margin: 20px;
 }
 
-/* ====== Fondo por páginas ====== */
+/* Logo SangarFlix */
+.logo {
+    position: relative;
+    top: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: -20px; 
+    text-align: center;
+}
+
+.sangar {
+    color: red;
+}
+
+.flix {
+    color: white;
+}
+/* fondo pag */
 .login-bg, .register-bg {
   background: url("../imagenes/fondo_inicio.png") no-repeat center center/cover;
   min-height: 100vh;
@@ -35,7 +54,7 @@ body {
   min-height: 100vh;
 }
 
-/* ====== Contenedores ====== */
+/* contenedores */
 .login-container, .register-container {
   background: rgba(0, 0, 0, 0.75);
   padding: 40px;
@@ -53,7 +72,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* ====== Inputs ====== */
+/* inputs */
 input {
   width: 100%;
   padding: 12px;
@@ -71,7 +90,7 @@ input:focus {
   background: #444;
 }
 
-/* ====== Botones ====== */
+/* botones */
 .btn {
   width: 100%;
   padding: 12px;
@@ -104,7 +123,7 @@ input:focus {
   background: #f40612;
 }
 
-/* ====== Links ====== */
+/*  Links  */
 .link {
   color: #fff;
   text-decoration: none;
@@ -115,7 +134,7 @@ input:focus {
   text-decoration: underline;
 }
 
-/* ====== Home ====== */
+/* home */
 header {
   display: flex;
   align-items: center;
@@ -123,7 +142,7 @@ header {
   justify-content: space-between;
 }
 
-/* ====== Responsivo ====== */
+/* responsive?  */
 @media (max-width: 600px) {
   .login-container, .register-container {
     padding: 25px;
