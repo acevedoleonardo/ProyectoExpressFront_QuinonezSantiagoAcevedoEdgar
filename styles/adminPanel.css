@@ -1,19 +1,20 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #330000; /* fondo rojo oscuro */
-  color: #f0e6e6; /* texto claro */
+  background-color: #000; 
+  color: #e6e6e6; 
   margin: 0;
   padding: 0 1rem;
 }
 
+/* HEADER */
 header {
-  background-color: #2d1a1a; /* rojo intenso */
-  color: white;
+  background-color: #111; 
+  color: #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(179, 0, 0, 0.6);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
 }
 
 header h1 {
@@ -21,10 +22,12 @@ header h1 {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
+  color: #ff1a1a; 
 }
 
+/* NAV */
 nav a {
-  color: #ffd6d6; /* rojo claro */
+  color: #ccc; 
   margin-left: 1.5rem;
   text-decoration: none;
   font-weight: 600;
@@ -32,36 +35,40 @@ nav a {
 }
 
 nav a:hover {
-  color: #ff4d4d; /* rojo vibrante al pasar ratón */
+  color: #ff1a1a;
   text-decoration: underline;
 }
 
+/* MAIN */
 main {
   max-width: 1000px;
   margin: 2rem auto;
 }
 
+/* Secciones y apartados*/
 section {
-  background: #4d0000; /* rojo oscuro medio */
-  box-shadow: 0 0 10px #a60000;
+  background: #1a1a1a; 
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
   border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
 section h2 {
-  color: #ff9999; /* rosa pálido */
+  color: #ff4d4d;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #ff4d4d;
+  border-bottom: 1px solid #ff1a1a;
   padding-bottom: 0.5rem;
   font-weight: 700;
 }
 
+/* Lista*/
 ul {
   padding-left: 1.4rem;
   margin-bottom: 1rem;
@@ -72,9 +79,19 @@ li {
   font-weight: 500;
 }
 
+/* Botoness */
 button {
-  background-color: #b30000;
-  color: #fff0f0;
+  background-color: #ff1a1a;
+  color: #fff;
   border: none;
-  padding
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
 }
