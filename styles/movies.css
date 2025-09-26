@@ -1,0 +1,63 @@
+/* Estilos generales para body y fuente */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+/* Encabezado con menú de navegación */
+header {
+  background-color: #223344;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Enlaces de navegación con espacios entre ellos */
+nav a {
+  color: #7ec8e3;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Enlace activo subrayado */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal con padding y diseño */
+main {
+  padding: 2rem;
+}
+
+/* Filtros y selectores alineados */
+#filters, div {
+  margin-bottom: 1rem;
+}
+
+/* Lista de películas como lista sin estilo, con padding en items */
+#movieList {
+  list-style: none;
+  padding: 0;
+}
+
+#movieList li {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar sobre el elemento */
+#movieList li:hover {
+  background-color: #e0f0ff;
+}

@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 1rem;
+  background-color: #fafafa;
+  color: #222;
+}
+
+header {
+  background-color: #334466;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+nav a {
+  color: #7ab8d9;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+#movieInfo {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 0 7px #ccc;
+  margin-bottom: 2rem;
+}
+
+#reviewsSection h2 {
+  margin-bottom: 1rem;
+}
+
+#reviewList {
+  list-style: none;
+  padding: 0;
+}
+
+#reviewList li {
+  background: white;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+}
+
+#addReviewForm {
+  margin-top: 2rem;
+  background: #eef7ff;
+  padding: 1rem;
+  border-radius: 5px;
+}
