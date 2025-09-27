@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro - SangarFlix</title>
-  <link rel="stylesheet" href="../styles/index.css">
+  <title>SangarFlix - Registro</title>
+  <link rel="stylesheet" href="../styles/register.css">
 </head>
-<body>
-  <div class="login-container">
-    <h1 style="color:white;">Registrarme</h1>
-    <form id="registerForm">
-      <input type="text" id="newUser" placeholder="Nuevo Usuario" required>
-      <input type="password" id="newPassword" placeholder="Nueva Contraseña" required>
-      <button type="submit" class="btn">Registrarme</button>
-    </form>
-    <p style="color:white;">¿Ya tienes cuenta? <a href="../index.html">Inicia sesión</a></p>
-  </div>
+<body class="register-bg">
+  <header>
+    <div class="logo">
+      <span class="sangar">Sangar</span><span class="flix">Flix</span>
+    </div>
+  </header>
 
-  <script src="../scripts/register.js"></script>
+  <main>
+    <div class="register-container">
+      <h2 class="form-title">Registrarme</h2>
+      <form id="registerForm">
+        <input type="text" id="registerUser" placeholder="Nuevo Usuario" required>
+        <input type="password" id="registerPass" placeholder="Nueva Contraseña" required>
+        <button type="submit" class="btn">Registrarme</button>
+      </form>
+      <p>¿Ya tienes cuenta? 
+        <a href="../index.html" class="link">Inicia sesión</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="../scripts/register.js" defer></script>
 </body>
 </html>
