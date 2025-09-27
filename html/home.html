@@ -64,6 +64,35 @@
 
   <!-- Modal y resto igual -->
 
+<!-- Modal de detalles y reseñas -->
+<div id="movieModal" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.8); overflow-y: auto; z-index: 1000;">
+  <div style="background-color: #222; color: #eee; max-width: 600px; margin: 2rem auto; padding: 1.5rem; border-radius: 8px; position: relative;">
+    <button id="closeModal" style="position: absolute; top:10px; right:10px; background:#e50914; border:none; color: white; padding:5px 10px; cursor:pointer; border-radius: 3px;">Cerrar</button>
+
+    <h2 id="modalTitle"></h2>
+    <img id="modalImage" src="" alt="" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 6px;" />
+    <p id="modalDescription" style="margin-top: 1rem;"></p>
+    <p><strong>Categoría:</strong> <span id="modalCategory"></span></p>
+    <p><strong>Año:</strong> <span id="modalYear"></span></p>
+    <p><strong>Rating:</strong> <span id="modalRating"></span></p>
+
+    <button id="addToListBtn" onclick="toggleMyList(currentMovieId)" style="background:#333; color:#fff; border:none; padding: 10px; width: 100%; margin-bottom: 1rem; border-radius: 6px; font-weight: bold; cursor: pointer;">
+      <span id="listBtnText">Agregar a Mi Lista</span>
+    </button>
+
+    <div id="reviewsList" style="max-height: 200px; overflow-y: auto; margin-bottom: 1rem; border-top: 1px solid #444; padding-top: 1rem;"></div>
+
+    <textarea id="reviewText" placeholder="Escribe una reseña..." rows="3" style="width: 100%; padding: 10px; border-radius: 6px; border: none;"></textarea>
+
+    <div id="starsRating" data-selected-rating="0" style="font-size: 1.5rem; margin: 0.5rem 0; cursor: pointer;"></div>
+
+    <button id="submitReview" style="background:#e50914; border:none; color: white; padding: 10px; width: 100%; border-radius: 6px; font-weight: bold; cursor: pointer;">
+      Enviar Reseña
+    </button>
+  </div>
+</div>
+
+
 <script src="../scripts/home.js"></script>
 </body>
 </html>
