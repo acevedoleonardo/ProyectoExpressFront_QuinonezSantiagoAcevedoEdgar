@@ -6,40 +6,34 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Cuerpo y fondo */
 body {
   color: #fff;
   background-color: #000;
 }
 
-/* logo global */
-.logo-text {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: red;
-  margin: 20px;
-}
-
-/* Logo SangarFlix */
+/* Logo */
 .logo {
-    position: relative;
-    top: -30px; 
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: -20px; 
-    text-align: center;
+  position: relative;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: -20px;
+  text-align: center;
 }
 
 .sangar {
-    color: red;
+  color: red;
 }
 
 .flix {
-    color: white;
+  color: white;
 }
-/* fondo pag */
-.login-bg, .register-bg {
+
+/* Fondo imagen login */
+.login-bg {
   background: url("../imagenes/fondo_inicio.png") no-repeat center center/cover;
   min-height: 100vh;
   display: flex;
@@ -48,14 +42,8 @@ body {
   justify-content: center;
 }
 
-.home-bg {
-  background-color: #000;
-  color: #fff;
-  min-height: 100vh;
-}
-
-/* contenedores */
-.login-container, .register-container {
+/* Contenedor login */
+.login-container {
   background: rgba(0, 0, 0, 0.75);
   padding: 40px;
   border-radius: 8px;
@@ -65,6 +53,7 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
+/* Título formulario */
 .form-title {
   font-size: 1.6rem;
   font-weight: bold;
@@ -72,7 +61,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* inputs */
+/* Inputs */
 input {
   width: 100%;
   padding: 12px;
@@ -90,7 +79,7 @@ input:focus {
   background: #444;
 }
 
-/* botones */
+/* Boton */
 .btn {
   width: 100%;
   padding: 12px;
@@ -109,21 +98,7 @@ input:focus {
   background: #f40612;
 }
 
-.btn-logout {
-  background: #e50914;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  margin-left: auto;
-}
-
-.btn-logout:hover {
-  background: #f40612;
-}
-
-/*  Links  */
+/* Links */
 .link {
   color: #fff;
   text-decoration: none;
@@ -134,22 +109,13 @@ input:focus {
   text-decoration: underline;
 }
 
-/* home */
-header {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  justify-content: space-between;
-}
-
-/* responsive?  */
+/* Responsive */
 @media (max-width: 600px) {
-  .login-container, .register-container {
+  .login-container {
     padding: 25px;
     max-width: 300px;
   }
-
-  .logo-text {
-    font-size: 1.8rem;
+  .logo {
+    font-size: 2rem;
   }
 }

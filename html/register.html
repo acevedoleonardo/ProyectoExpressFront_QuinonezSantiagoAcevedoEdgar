@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SangarFlix - Registro</title>
-  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/register.css" />
 </head>
 <body class="register-bg">
-  <!-- Logo fijo arriba -->
   <header>
-   <div class="logo">
-    <span class="sangar">Sangar</span><span class="flix">Flix</span>
-</div>
+    <div class="logo">
+      <span class="sangar">Sangar</span><span class="flix">Flix</span>
+    </div>
   </header>
 
-  <!-- Cajita de registro -->
-  <div class="register-container">
-    <h2 class="form-title">Registrarse</h2>
-    <form id="registerForm">
-      <input type="text" id="regUser" placeholder="Usuario" required>
-      <input type="email" id="regEmail" placeholder="Correo electrónico" required>
-      <input type="password" id="regPass" placeholder="Contraseña" required>
-      <button type="submit" class="btn">Crear Cuenta</button>
-    </form>
+  <main>
+    <div class="register-container">
+      <h2>Registrarse</h2>
+      <form id="registerForm" novalidate>
+        <input type="text" id="regUser" placeholder="Usuario" required />
+        <input type="email" id="regEmail" placeholder="Correo electrónico" required />
+        <input type="password" id="regPass" placeholder="Contraseña" required minlength="6" />
+        <button type="submit" class="btn">Crear Cuenta</button>
+      </form>
+      <p>¿Ya tienes cuenta? <a href="../index.html">Inicia sesión</a></p>
+      <div id="message" style="color: yellow; margin-top: 15px;"></div>
+    </div>
+  </main>
 
-    <p>¿Ya tienes cuenta? 
-      <a href="../index.html" class="link">Inicia sesión</a>
-    </p>
-  </div>
-
-  <script src="../scripts/script.js"></script>
+  <script src="../scripts/register.js" defer></script>
 </body>
 </html>
