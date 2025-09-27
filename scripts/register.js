@@ -22,7 +22,7 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
     return;
   }
 
-  // Guardar el nuevo usuario
+  // guarda el usuario nuevo
   users.push({
     name: name,
     email: email,
