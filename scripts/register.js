@@ -1,28 +1,40 @@
 document.getElementById("registerForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const user = document.getElementById("newUser").value;
-  const password = document.getElementById("newPassword").value;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const user = document.getElementById("newUser").value.trim();
+  const password = document.getElementById("newPassword").value.trim();
 
-  if (!user || !password) {
+  // validacion
+  if (!name || !email || !user || !password) {
     alert("Por favor, completa todos los campos.");
     return;
   }
 
-  // antes de implementar el back se mira si ya existe el usuario en localStorage
+  //usuarios de localStore
   let users = JSON.parse(localStorage.getItem("users")) || [];
 
-  const userExists = users.find(u => u.username === user);
-
+  // valida si ya existe el mismo usuario o correo
+  const userExists = users.find(u => u.username === user || u.email === email);
   if (userExists) {
-    alert("El usuario ya existe. Intenta con otro nombre.");
+    alert("El usuario o correo ya existe. Intenta con otros.");
     return;
   }
 
-  // se guarda el nuevo usuario
-  users.push({ username: user, password: password });
+  // Guardar el nuevo usuario
+  users.push({
+    name: name,
+    email: email,
+    username: user,
+    password: password
+  });
+
   localStorage.setItem("users", JSON.stringify(users));
 
   alert("Registro exitoso, ahora puedes iniciar sesión.");
+  document.getElementById("registerForm").reset();
+
+  // Redirigir al login (index.html en tu caso)
   window.location.href = "../index.html"; 
 });
