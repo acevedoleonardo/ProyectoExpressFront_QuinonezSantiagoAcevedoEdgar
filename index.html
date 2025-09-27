@@ -9,12 +9,12 @@
 <body class="login-bg">
   <!-- Logo fijo arriba -->
   <header>
-   <div class="logo">
-    <span class="sangar">Sangar</span><span class="flix">Flix</span>
-</div>
+    <div class="logo">
+      <span class="sangar">Sangar</span><span class="flix">Flix</span>
+    </div>
   </header>
 
-  <!-- Cajita de loginn -->
+  <!-- Cajita de login -->
   <div class="login-container">
     <h2 class="form-title">Iniciar Sesión</h2>
     <form id="loginForm">
@@ -22,12 +22,17 @@
       <input type="password" id="loginPass" placeholder="Contraseña" required>
       <button type="submit" class="btn">Iniciar Sesión</button>
     </form>
-
     <p>¿No tienes cuenta? 
       <a href="./html/register.html" class="link">Regístrate aquí</a>
     </p>
   </div>
 
-  <script src="./script/script.js"></script>
+  <script>
+    // Evita intentos de enviar datos al backend mientras pruebas el frontend
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Este es un ejemplo local, funcionalidad de login aún no activa.');
+    });
+  </script>
 </body>
 </html>
