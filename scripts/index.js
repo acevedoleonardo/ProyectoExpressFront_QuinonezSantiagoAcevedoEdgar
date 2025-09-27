@@ -1,5 +1,3 @@
-// Simulación de login local sin backend
-
 document.getElementById('loginForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -11,9 +9,17 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     return;
   }
 
-  // Simulación exitosa de login
-  alert(`¡Bienvenido, ${username}! (Simulación de login local)`);
+  // aqui es donde se recuperan los usuarios guardados
+  let users = JSON.parse(localStorage.getItem("users")) || [];
 
-  // Redirigir a home.html dentro de la carpeta html/
-  window.location.href = './html/home.html';
+  // valida usuario y contraseña
+  const validUser = users.find(u => u.username === username && u.password === password);
+
+  if (validUser) {
+    alert(`¡Bienvenido, ${username}!`);
+    localStorage.setItem("currentUser", JSON.stringify(validUser)); 
+    window.location.href = './html/home.html';
+  } else {
+    alert("Usuario o contraseña incorrectos.");
+  }
 });
