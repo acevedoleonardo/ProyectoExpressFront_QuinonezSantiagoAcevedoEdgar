@@ -1,97 +1,112 @@
+/* --------------------- */
+/* Estilos generales base */
+/* --------------------- */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #000; 
-  color: #e6e6e6; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente cómoda y legible */
+  background-color: #000;  /* Fondo negro para tema oscuro */
+  color: #e6e6e6;  /* Texto claro para contraste */
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 1rem; /* Margen horizontal para respiración */
 }
 
-/* HEADER */
+/* ----------- */
+/* Header      */
+/* ----------- */
 header {
-  background-color: #111; 
-  color: #fff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+  background-color: #111;  /* Fondo muy oscuro para header */
+  color: #fff;  /* Texto blanco */
+  padding: 1rem 2rem;  /* Relleno amplio */
+  display: flex;  /* Flexbox para alinear contenido */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrar vertical */
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3); /* Sombra roja para profundidad */
 }
 
 header h1 {
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-weight: 700; /* Texto en negrita */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-transform: uppercase; /* Mayúsculas */
   margin: 0;
-  color: #ff1a1a; 
+  color: #ff1a1a;  /* Rojo vibrante */
 }
 
-/* NAV */
+/* ------ */
+/* Navegación */
+/* ------ */
 nav a {
-  color: #ccc; 
-  margin-left: 1.5rem;
+  color: #ccc;  /* Gris claro para enlaces */
+  margin-left: 1.5rem; /* Separación */
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Transición suave en color */
 }
 
 nav a:hover {
-  color: #ff1a1a;
-  text-decoration: underline;
+  color: #ff1a1a; /* Cambia a rojo al pasar mouse */
+  text-decoration: underline; /* Subrayado para indicar hover */
 }
 
-/* MAIN */
+/* -------- */
+/* Contenido principal */
+/* -------- */
 main {
-  max-width: 1000px;
-  margin: 2rem auto;
+  max-width: 1000px; /* Ancho máximo para evitar líneas muy largas */
+  margin: 2rem auto; /* Centrar y margen arriba/abajo */
 }
 
-/* Secciones y apartados*/
+/* ----------------- */
+/* Secciones (usuarios, categorías, películas) */
+/* ----------------- */
 section {
-  background: #1a1a1a; 
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #1a1a1a; /* Fondo gris oscuro */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2); /* Sombra roja tenue */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 1.5rem; /* Relleno interno */
+  margin-bottom: 2rem; /* Separación entre secciones */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
 }
 
 section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  transform: translateY(-5px); /* Eleva la sección al pasar mouse */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); /* Sombra más intensa */
 }
 
 section h2 {
-  color: #ff4d4d;
+  color: #ff4d4d; /* Título en rojo claro */
   margin-bottom: 1rem;
-  border-bottom: 1px solid #ff1a1a;
+  border-bottom: 1px solid #ff1a1a; /* Línea inferior roja */
   padding-bottom: 0.5rem;
   font-weight: 700;
 }
 
-/* Lista*/
+/* ------- */
+/* Listas */
+/* ------- */
 ul {
-  padding-left: 1.4rem;
+  padding-left: 1.4rem; /* Sangría para listas */
   margin-bottom: 1rem;
 }
 
 li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem; /* Espacio entre elementos */
   font-weight: 500;
 }
 
-/* Botoness */
+/* -------- */
+/* Botones */
+/* -------- */
 button {
-  background-color: #ff1a1a;
-  color: #fff;
+  background-color: #ff1a1a; /* Fondo rojo */
+  color: #fff; /* Texto blanco */
   border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 6px;
+  padding: 0.7rem 1.2rem; /* Relleno cómodo */
+  border-radius: 6px; /* Bordes redondeados */
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease; /* Efectos suaves */
 }
 
 button:hover {
-  background-color: #cc0000;
-  transform: scale(1.05);
+  background-color: #cc0000; /* Rojo más intenso */
+  transform: scale(1.05); /* Aumenta tamaño ligeramente */
 }
