@@ -1,5 +1,11 @@
 # Proyecto Express Frontend
 
+## ver figma
+```
+https://www.figma.com/design/jsS0NEQy9LwGIH0bcBdQf1/SangarFlix?node-id=0-1&t=vUQFvwqECLw4Na6M-1
+
+```
+ 
 ## SangarFlix
 Este proyecto es el frontend de una aplicación Full Stack desarrollada con HTML, CSS y JavaScript,
 diseñada para conectarse con un backend en Express. 
