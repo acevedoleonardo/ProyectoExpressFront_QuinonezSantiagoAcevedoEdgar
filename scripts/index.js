@@ -1,25 +1,44 @@
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
+// index.js - Login usando localStorage
+const loginForm = document.getElementById("loginForm");
 
-  const username = document.getElementById('loginUser').value.trim();
-  const password = document.getElementById('loginPass').value;
+if (loginForm) {
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  if (username === '' || password === '') {
-    alert('Por favor, completa todos los campos.');
-    return;
-  }
+    const input = document.getElementById("loginUser").value.trim();
+    const pass = document.getElementById("loginPass").value.trim();
 
-  // aqui es donde se recuperan los usuarios guardados
-  let users = JSON.parse(localStorage.getItem("users")) || [];
+    if (!input || !pass) {
+      alert("Por favor completa todos los campos.");
+      return;
+    }
 
-  // valida usuario y contraseña
-  const validUser = users.find(u => u.username === username && u.password === password);
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-  if (validUser) {
-    alert(`¡Bienvenido, ${username}!`);
-    localStorage.setItem("currentUser", JSON.stringify(validUser)); 
-    window.location.href = './html/home.html';
-  } else {
-    alert("Usuario o contraseña incorrectos.");
-  }
-});
+    // buscar por nombres
+    const found = users.find(u =>
+      (u.username && u.username.toLowerCase() === input.toLowerCase()) ||
+      (u.email && u.email.toLowerCase() === input.toLowerCase())
+    );
+
+    if (!found) {
+      alert("Usuario no encontrado.");
+      return;
+    }
+
+    if (found.password !== pass) {
+      alert("Contraseña incorrecta.");
+      return;
+    }
+
+    // guardar
+    localStorage.setItem("currentUser", JSON.stringify({
+      username: found.username,
+      name: found.name,
+      email: found.email
+    }));
+
+    alert("Inicio de sesión exitoso");
+    window.location.href = "./html/home.html";
+  });
+}

@@ -1,6 +1,3 @@
-/* home.css */
-
-/* Reset base */
 * {
   box-sizing: border-box;
 }
@@ -73,14 +70,14 @@ body {
   background-color: #b0070f;
 }
 
-/* Main content */
+/* contenido */
 .main-content {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 2rem;
 }
 
-/* Filters */
+/* Filtors*/
 .filters-section {
   background-color: #1f1f1f;
   padding: 1rem 1.5rem;
@@ -124,8 +121,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1rem;
 }
-
-/* Puedes agregar estilos para tarjetas, modal y botones después */
+*/
 
 .movie-card {
   background-color: #222;

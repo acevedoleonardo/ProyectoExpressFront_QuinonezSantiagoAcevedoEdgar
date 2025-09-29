@@ -1,40 +1,41 @@
-document.getElementById("registerForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+// register.js - Registro de usuarios con localStorage
+const registerForm = document.getElementById("registerForm");
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const user = document.getElementById("newUser").value.trim();
-  const password = document.getElementById("newPassword").value.trim();
+if (registerForm) {
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  // validacion
-  if (!name || !email || !user || !password) {
-    alert("Por favor, completa todos los campos.");
-    return;
-  }
+    const name = document.getElementById("name").value.trim();
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-  //usuarios de localStore
-  let users = JSON.parse(localStorage.getItem("users")) || [];
+    if (!name || !username || !email || !password) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
 
-  // valida si ya existe el mismo usuario o correo
-  const userExists = users.find(u => u.username === user || u.email === email);
-  if (userExists) {
-    alert("El usuario o correo ya existe. Intenta con otros.");
-    return;
-  }
+    let users = JSON.parse(localStorage.getItem("users")) || [];
 
-  // guarda el usuario nuevo
-  users.push({
-    name: name,
-    email: email,
-    username: user,
-    password: password
+    // verificar si existe
+    const exists = users.find(u =>
+      (u.username && u.username.toLowerCase() === username.toLowerCase()) ||
+      (u.email && u.email.toLowerCase() === email.toLowerCase())
+    );
+
+    if (exists) {
+      alert("El usuario o correo ya existe.");
+      return;
+    }
+
+    // guardar nuevo usuario
+    users.push({ name, username, email, password });
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert(" Registro exitoso. Ahora puedes iniciar sesión.");
+    registerForm.reset();
+
+    // Redirigir al login
+    window.location.href = "../index.html";
   });
-
-  localStorage.setItem("users", JSON.stringify(users));
-
-  alert("Registro exitoso, ahora puedes iniciar sesión.");
-  document.getElementById("registerForm").reset();
-
-  // Redirigir al login (index.html en tu caso)
-  window.location.href = "../index.html"; 
-});
+}

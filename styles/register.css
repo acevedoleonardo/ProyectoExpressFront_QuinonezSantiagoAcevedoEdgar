@@ -9,7 +9,6 @@
   padding: 20px;
 }
 
-/* Cajita */
 .register-container {
   position: relative;
   z-index: 1;
@@ -23,7 +22,6 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Logo SangarFlix */
 .logo {
   font-size: 2.8rem;
   font-weight: bold;
@@ -39,7 +37,6 @@
   color: white;
 }
 
-/* Título */
 .form-title {
   font-size: 1.6rem;
   font-weight: bold;
@@ -47,7 +44,6 @@
   margin-bottom: 20px;
 }
 
-/* Inputs */
 .register-container input {
   width: 100%;
   padding: 12px;
@@ -63,7 +59,6 @@
   color: #aaa;
 }
 
-/* Botón */
 .register-container .btn {
   width: 100%;
   padding: 12px;
@@ -82,7 +77,6 @@
   background: #f40612;
 }
 
-/* Link de cambio */
 .register-container p {
   margin-top: 15px;
   font-size: 14px;
@@ -99,9 +93,8 @@
   text-decoration: underline;
 }
 
-/* Responsive ?? */
 @media (max-width: 600px) {
-  .login-container {
+  .register-container {
     padding: 25px;
     max-width: 300px;
   }
