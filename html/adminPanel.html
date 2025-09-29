@@ -13,23 +13,96 @@
       <a href="home.html">Inicio</a>
       <a href="movies.html">Listado de Películas</a>
       <a href="register.html">Registro / Login</a>
+      <button id="adminLogout" class="btn danger" style="margin-left:.75rem;">Salir</button>
     </nav>
   </header>
 
   <main>
+    <!-- Usuarios -->
     <section id="userManagement">
       <h2>Gestión de Usuarios</h2>
+      <div class="actions-row">
+        <button id="seedUsers" class="btn">Restaurar usuarios</button>
+      </div>
+      <div id="userList" class="list"></div>
+      <p id="userEmpty" class="muted hide">No hay usuarios registrados</p>
     </section>
 
+    <!-- categoria -->
     <section id="categoryManagement">
       <h2>Gestión de Categorías</h2>
+      <div class="toolbar">
+        <form id="catForm" class="inline-form" autocomplete="off">
+          <input type="text" name="name" placeholder="Nueva categoría (ej. anime)" required />
+          <button type="submit" class="btn primary">Agregar</button>
+        </form>
+        <div class="search">
+          <input id="catSearch" type="search" placeholder="Buscar categoría…" />
+        </div>
+      </div>
+      <div id="categoryList" class="list"></div>
+      <p id="catEmpty" class="muted hide">No hay categorías.</p>
+      <div class="pagination" id="catPager">
+        <button class="btn" data-cat-prev>◀ Anterior</button>
+        <span class="page-info" id="catPageInfo">1 / 1</span>
+        <button class="btn" data-cat-next>Siguiente ▶</button>
+      </div>
     </section>
 
+    <!-- Películas -->
     <section id="movieManagement">
-      <h2>Gestión de Películas</h2>
+      <h2>Gestión de Películas (Pendientes)</h2>
+      <div class="toolbar">
+        <div class="actions-row">
+          <button id="seedMovies" class="btn">Restaurar películas </button>
+        </div>
+        <div class="search">
+          <input id="movieSearch" type="search" placeholder="Buscar película…" />
+        </div>
+      </div>
+      <div id="movieList" class="grid"></div>
+      <p id="movieEmpty" class="muted hide">No hay películas pendientes de aprobación</p>
+      <div class="pagination" id="moviePager">
+        <button class="btn" data-mov-prev>◀ Anterior</button>
+        <span class="page-info" id="moviePageInfo">1 / 1</span>
+        <button class="btn" data-mov-next>Siguiente ▶</button>
+      </div>
     </section>
   </main>
 
-  <script src="script/admin-panel.js"></script>
+  <!-- edicion peli -->
+  <div class="modal-backdrop hide" id="movieModalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="movieModalTitle">
+      <header class="modal-header">
+        <h3 id="movieModalTitle">Editar película</h3>
+        <button class="modal-close" id="movieModalClose" aria-label="Cerrar">×</button>
+      </header>
+      <div class="modal-body">
+        <form id="movieEditForm" class="form-vertical" autocomplete="off">
+          <input type="hidden" name="id" />
+          <label>Título
+            <input type="text" name="title" required />
+          </label>
+          <label>Año
+            <input type="number" name="year" min="1900" max="2100" required />
+          </label>
+          <label>Categoría
+            <select name="category" id="movieCategorySelect"></select>
+          </label>
+          <label>URL de imagen (opcional)
+            <input type="url" name="image" placeholder="https://…" />
+          </label>
+          <div class="modal-actions">
+            <button type="button" class="btn" id="movieModalCancel">Cancelar</button>
+            <button type="submit" class="btn primary">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="../scripts/adminPanel.js" defer></script>
 </body>
 </html>

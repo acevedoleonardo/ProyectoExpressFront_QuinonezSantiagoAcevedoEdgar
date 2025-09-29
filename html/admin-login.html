@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="../styles/adminPanel.css" />
+</head>
+<body>
+  <header>
+    <h1>Panel Admin</h1>
+    <nav>
+      <a href="home.html">Inicio</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Acceso Administrador</h2>
+      <form id="adminLoginForm" class="inline-form" autocomplete="off">
+        <input type="text" name="username" placeholder="Usuario" required />
+        <input type="password" name="password" placeholder="Contraseña" required />
+        <button type="submit" class="btn primary">Entrar</button>
+      </form>
+      <p class="muted">Solo uso temporal mientras se integra el backend.</p>
+      <div id="toast" class="toast"></div>
+    </section>
+  </main>
+
+  <script src="../scripts/admin-login.js" defer></script>
+</body>
+</html>
