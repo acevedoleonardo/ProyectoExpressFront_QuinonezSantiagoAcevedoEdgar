@@ -19,7 +19,8 @@ Permite la gestión de usuarios y películas, mostrando listados de peliuclas, p
 ProyectoExpressFront_QuinonezSantiagoAcevedoEdgar/
 │
 ├── html/
-│   ├── adminPanel.hmtl          
+│   ├── adminPanel.hmtl  
+    ├── admin-login.hmtl          
 │   ├── home.html          
 │   ├── register.html        
 │   └── admin.html           
@@ -29,7 +30,8 @@ ProyectoExpressFront_QuinonezSantiagoAcevedoEdgar/
 │   └── señor_de_los_anillos.png             
 │
 ├── scripts/
-│   ├── adminPanel.js               
+│   ├── adminPanel.js 
+    ├── admin-login.js                
 │   ├── home.js               
 │   ├── index.js               
 │   └── register.js            
